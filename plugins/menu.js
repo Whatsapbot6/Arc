@@ -29,23 +29,23 @@ const defaultMenu = {
 ┖━━━━━━━━━━━━━━━⦂
 
 ╭━━━━❰ 𝗨𝗦𝗘𝗥 ❱
-┃ 🗿 𝗟𝗜𝗠𝗜𝗧 : *%limit Limit*
-┃ 🗿 𝗥𝗢𝗟𝗘 : *%role*
-┃ 🗿 𝗟𝗘𝗩𝗘𝗟 : *%level (%exp / %maxexp)*
-┃ 🗿 𝗧𝗢𝗧𝗔𝗟 𝗫𝗣 : %totalexp ✨
+┃ 📀 𝗟𝗜𝗠𝗜𝗧 : *%limit Limit*
+┃ 📀 𝗥𝗢𝗟𝗘 : *%role*
+┃ 🪙 𝗟𝗘𝗩𝗘𝗟 : *%level (%exp / %maxexp)*
+┃ 🪙 𝗧𝗢𝗧𝗔𝗟 𝗫𝗣 : %totalexp ✨
 ┃ 
-┃ 🌍 𝗗𝗔𝗧𝗘: *%date*
-┃ 🌍 𝗧𝗜𝗠𝗘: *%time*
+┃ 📟 𝗗𝗔𝗧𝗘: *%date*
+┃ 📟 𝗧𝗜𝗠𝗘: *%time*
 ┃
-┃ 🎲 𝗨𝗣𝗧𝗜𝗠𝗘: *%uptime (%muptime)*
-┃ 🎲 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘: %rtotalreg of %totalreg
+┃  // 🎲 𝗨𝗣𝗧𝗜𝗠𝗘: *%uptime (%muptime)*
+┃  // 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘: %rtotalreg of %totalreg
 ┗━━━━━━━━━━━━━━━━⦂
 %readmore`.trimStart(),
   header: '╭━━━❰ %category ❱',
-  body: '┃ ⚜️ %cmd %islimit %isPremium',
+  body: '┃ 🇲🇦 %cmd %islimit %isPremium',
   footer: '╰━━━━━━━⦂\n',
   after: `
-𝐀𝐑𝐂𝐓𝐈𝐗 𝐁𝐎𝐓 𝐈𝐍𝐂 |©𝐒𝐢𝐛𝐬𝐬𝐬𝐬𝐬𝐬𝐬𝐬
+mohamedbella235@gmail.com | WOX 
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
@@ -147,10 +147,10 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = await conn.profilePictureUrl(conn.user.jid, 'image').catch(_ => './media/arctix.jpg')
-    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://www.instagram.com/sibssssssss', 'INSTAGRAM', owner[0][0], 'OWNER', [
-      ['BOTGROUP', '/donasi'],
-      ['SPEED', '/ping'],
-      ['OWNER', '/owner']
+    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://www.instagram.com/wox_bella', 'INSTAGRAM', owner[0][0], 'OWNER', [
+      ['🥵', '/sc'],
+      ['فيسبوك', '/donasi'],
+      ['مول البوت هه ', '/owner']
     ], m, { asLocation: 1 })
   } catch (e) {
     conn.reply(m.chat, 'My friend, menu  error', m)
